@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Table_2_Model;
 
 class Table_1_Model extends Model
 {
@@ -13,6 +14,6 @@ class Table_1_Model extends Model
     {
         // return $this->hasOne('App\Models\Table_2_Model', 'id', 'id');
 
-        return $this->hasOne('App\Models\Table_2_Model', 'id', 'table_1_id');
+        return $this->hasOne(Table_2_Model::class, 'id', 'table_2_id');
     }
 }

@@ -17,6 +17,8 @@ class IndexController extends Controller
 
         // 2/ One to One Field table_1_id
         $phone = Table_1_Model::where('table_1_id', '=', 3)->firstOrFail()->table_2->toArray();
+        // $phone = Table_1_Model::where('name', '=', 'name_1')->orderByDesc('table_1_id')->firstOrFail()->table_2->toArray();
+
         echo '<pre style="color:red";>$phone === '; print_r($phone);echo '</pre>';
     }
 
