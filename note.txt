@@ -1,0 +1,7 @@
+1/ Create Mysql Database PORT 3307
+name: migration_db
+Character set: utf8
+Collation: utf8_general_ci
+
+php artisan make:model Phone
+php artisan migrate
